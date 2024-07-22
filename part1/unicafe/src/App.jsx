@@ -2,15 +2,15 @@ const Header = ( props ) =>
 {
   return (
     <h1>{ props.course }</h1>
-  );
-};
+  )
+}
 
 const Part = ( props ) =>
 {
   return (
     <p>{ props.name } { props.exercises }</p>
-  );
-};
+  )
+}
 
 const Content = ( props ) =>
 {
@@ -21,16 +21,16 @@ const Content = ( props ) =>
         <Part key={ index } name={ part.name } exercises={ part.exercises } />
       ) ) }
     </>
-  );
-};
+  )
+}
 
 const Total = ( props ) =>
 {
   const total = props.parts.reduce( ( sum, part ) => sum + part.exercises, 0 );
   return (
     <p>Number of exercises { total }</p>
-  );
-};
+  )
+}
 
 const App = () =>
 {
@@ -59,7 +59,7 @@ const App = () =>
       <Content parts={ course.parts } />
       <Total parts={ course.parts } />
     </>
-  );
-};
+  )
+}
 
 export default App;
